@@ -3,7 +3,8 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: "*****"
+    - cron: "* * * * *"
+  workflow_dispatch:  
 jobs:
   echo:
     runs-on: ubuntu-latest 
