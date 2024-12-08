@@ -15,6 +15,9 @@ jobs:
             "title": "Test Issue",
             "body": "This issue is created as a test from GitHub Actions."
           }'
+  identify-issue:
+    runs-on: ubuntu-latest
+    steps:
       - name: Handle Issue Opened
         if: ${{ github.event.action == 'opened' }}
         run: echo "Issue opened!"
