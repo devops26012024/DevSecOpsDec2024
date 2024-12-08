@@ -3,7 +3,8 @@ name: Branch Pattern Example
 on:
   push:
     branches:
-      - main                  
+      - main
+      - develop
 
 jobs:
   test:
