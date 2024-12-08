@@ -15,3 +15,10 @@ jobs:
             "title": "Test Issue",
             "body": "This issue is created as a test from GitHub Actions."
           }'
+      - name: Handle Issue Opened
+        if: ${{ github.event.action == 'opened' }}
+        run: echo "Issue opened!"
+
+      - name: Handle Issue Closed
+        if: ${{ github.event.action == 'closed' }}
+        run: echo "Issue closed!"
