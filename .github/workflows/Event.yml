@@ -1,27 +1,16 @@
-name: Test Create Issue Job 
+name: Test Specific Event Types
 
 on:
-  workflow_dispatch: # Allows manual triggering from the Actions tab
+  issues:
+    types:
+      - opened
+      - closed
 
 jobs:
-  create-issue:
+  test-specific-events:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Issue
+      - name: Log Event Type
         run: |
-          curl -X POST https://api.github.com/repos/${{ github.repository }}/issues \
-          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          -d '{
-            "title": "Test Issue",
-            "body": "This issue is created as a test from GitHub Actions."
-          }'
-  identify-issue:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Handle Issue Opened
-        if: ${{ github.event.action == 'opened' }}
-        run: echo "Issue opened!"
-
-      - name: Handle Issue Closed
-        if: ${{ github.event.action == 'closed' }}
-        run: echo "Issue closed!"
+          echo "Triggered by event: ${{ github.event_name }}"
+          echo "Action type: ${{ github.event.action }}"
