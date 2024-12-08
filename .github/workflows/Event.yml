@@ -1,4 +1,4 @@
-name: Create Issue Example
+name: Create Issue Example 
 
 on:
   issues:
