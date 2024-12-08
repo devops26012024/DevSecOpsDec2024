@@ -1,4 +1,4 @@
-name: Branch Pattern Example
+name: Branch Pattern Example 
 
 on:
   push:
