@@ -1,4 +1,4 @@
-name: Run on Path Change 
+name: Run on Path Change  
 
 on:
   push:
