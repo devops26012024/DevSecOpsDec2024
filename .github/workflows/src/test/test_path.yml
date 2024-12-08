@@ -1,0 +1,14 @@
+name: Run on Path Change
+
+on:
+  push:
+    paths:
+      - "src/**"       # Match all files in the src/ directory
+      - "!src/tests/**" # Exclude src/tests/ directory
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a script
+        run: echo "Am inside src/test dir path!"
