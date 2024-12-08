@@ -3,7 +3,7 @@ name: Run on Path Change
 on:
   push:
     paths:
-      - "pradeep/**"         # Match all files in the src/ directory
+      - "/.github/workflows/pradeep/**"         # Match all files in the src/ directory
 
 jobs:
   build:
