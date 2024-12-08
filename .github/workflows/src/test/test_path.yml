@@ -2,14 +2,11 @@ name: Run on Path Change
 
 on:
   push:
-    paths:
-      - "src/**"       # Match all files in the src/ directory
-      - "!src/tests/**" # Exclude src/tests/ directory
 
 jobs:
   run-on-path-change:
     runs-on: ubuntu-latest
     steps:
       - name: Run a script
-        run: echo "Changes detected in src/ directory but not in src/tests/!"
+        run: echo "I am in test dir!"
 
