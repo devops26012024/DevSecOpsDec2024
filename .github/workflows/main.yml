@@ -1,0 +1,20 @@
+name: 1- Building the workflow 
+
+on:
+  push 
+  workflow_dispatch:
+  
+jobs:
+  echo-hello-world: 
+    runs-on: 
+      ubuntu-latest
+    steps: 
+	- run: echo "Hello World - Runner OS is $RUNNER_OS"	#RUNNER_OS is a predefined variable 
+
+  echo-say-good-bye:
+    runs-on:
+      windows-latest
+    steps:
+     - name: Shell	#to print RUNNER_OS in windows we have to use below 2 commands
+     - shell: bash	
+     - run: echo "Good bye - Runner OS is $RUNNER_OS"
