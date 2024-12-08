@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: Run a script
-        run: echo "This runs only on specific path changes!"
+        run: echo "Am inside src dir path!"
