@@ -1,20 +1,21 @@
-name: 04 - testing windows os output 
+name: 04 - Testing Windows OS Output 
 
 on:
   push: 
+    branches:
+      - main
   workflow_dispatch:
   
 jobs:
   echo-hello-world: 
-    runs-on: 
-      ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
-	- run: echo "Hello World - Runner OS is $RUNNER_OS"	
+      - name: Say hello 
+        run: echo "Hello World - Runner OS is $RUNNER_OS"	
 
   echo-say-good-bye:
-    runs-on:
-      windows-latest
+    runs-on: windows-latest
     steps:
-     - name: Shell	
-     - shell: bash	
-     - run: echo "Good bye - Runner OS is $RUNNER_OS"
+      - name: Say goodbye
+        shell: bash
+        run: echo "Good bye - Runner OS is $RUNNER_OS"
