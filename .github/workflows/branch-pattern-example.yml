@@ -1,13 +1,14 @@
-name: Branch Pattern Example 
+#name: Branch Pattern Example 
 
-on:
-  push:
-    branches:
-      - main                  
+#on:
+  #pull_request:
+    #branches:
+      #- main
+      #- develop
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Display branch
-        run: echo "Running on branch $GITHUB_REF"
+#jobs:
+  #test:
+   # runs-on: ubuntu-latest
+   # steps:
+    #  - name: Display branch
+     #   run: "echo 'Branch: $(basename $GITHUB_REF)'" 
