@@ -1,10 +1,11 @@
-name: Run on Path Change   
+name: Run on Path Change
 
 on:
   push:
     paths:
-      - "src/**"       # Match all files in the src/ directory
-      - "!src/tests/**" # Exclude src/tests/ directory
+      - "src/**"         # Match all files in the src/ directory
+      - "!src/tests/**"  # Exclude src/tests/ directory
+
 jobs:
   build:
     runs-on: ubuntu-latest
