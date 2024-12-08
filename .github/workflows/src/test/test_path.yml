@@ -5,10 +5,11 @@ on:
     paths:
       - "src/**"       # Match all files in the src/ directory
       - "!src/tests/**" # Exclude src/tests/ directory
-jobs:
-  build:
-    runs-on: ubuntu-latest
 
+jobs:
+  run-on-path-change:
+    runs-on: ubuntu-latest
     steps:
       - name: Run a script
-        run: echo "Am inside src/test dir path!"
+        run: echo "Changes detected in src/ directory but not in src/tests/!"
+
