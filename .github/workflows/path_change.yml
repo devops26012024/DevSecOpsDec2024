@@ -1,0 +1,23 @@
+name: Run on Specific Path Change
+
+on:
+  push:
+    paths:
+      - "src/**"       # Only trigger when files in the "src" directory change
+      - "README.md"    # Or when README.md changes
+  pull_request:
+    paths:
+      - "src/**"       # Same for pull requests affecting files in "src/"
+      - "README.md"    # Or affecting README.md
+
+jobs:
+  path-change-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Triggered Files
+        run: |
+          echo "This workflow was triggered by changes in specific paths."
+          echo "Files changed in this event:"
+          echo "${{ github.event.commits[0].added }}"
+          echo "${{ github.event.commits[0].modified }}"
+          echo "${{ github.event.commits[0].removed }}"
