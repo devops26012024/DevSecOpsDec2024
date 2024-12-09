@@ -1,16 +1,16 @@
-name: Pull Request Workflow 
+#name: Pull Request Workflow 
 
-on:
-  pull_request:
-    branches:
-      - main
-      - develop
+#on:
+ # pull_request:
+  #  branches:
+   #   - main
+    #  - develop
 
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+#jobs:
+ # build:
+  #  runs-on: ubuntu-latest
 
-    steps:
-      - name: Run tests
-        run: echo "Running tests for PR targeting ${{ github.ref }}"
+   # steps:
+    #  - name: Run tests
+     #   run: echo "Running tests for PR targeting ${{ github.ref }}"
