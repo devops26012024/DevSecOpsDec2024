@@ -1,4 +1,4 @@
-name: Run on Specific Path Change
+  name: Run on Specific Path Change
 
 on:
   push:
@@ -14,7 +14,6 @@ jobs:
   path-change-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Changed Files
+      - name: Print changed paths
         run: |
-          echo "Detecting changed files..."
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+          echo "Triggered by a change in paths: ${{ github.event.head_commit.modified }}"
