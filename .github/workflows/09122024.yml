@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'src/**'
+      - 'file.txt'
       - '!src/pradeep/**'
 
 jobs:
@@ -12,4 +13,4 @@ jobs:
 
     steps:
       - name: Run a script
-        run: echo "Am inside 09122024 file path!"
+        run: echo "Workflow triggered by changes in 'src/**' or 'file.txt'."
