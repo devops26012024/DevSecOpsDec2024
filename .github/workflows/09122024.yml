@@ -12,4 +12,4 @@ jobs:
 
     steps:
       - name: Run a script
-        run: echo "Am inside pradeep dir path!"
+        run: echo "Am inside 09122024 file path!"
